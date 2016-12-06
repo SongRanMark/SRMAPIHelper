@@ -13,6 +13,8 @@
 		037DC1CB1DF669930039122E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 037DC1C91DF669930039122E /* Main.storyboard */; };
 		037DC1CD1DF669930039122E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 037DC1CC1DF669930039122E /* Assets.xcassets */; };
 		037DC1D01DF669930039122E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 037DC1CE1DF669930039122E /* LaunchScreen.storyboard */; };
+		037DC1DB1DF6745D0039122E /* SRMAPIProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 037DC1DA1DF6745D0039122E /* SRMAPIProxy.m */; };
+		C384B7D383421617977656C9 /* libPods-SRMAPIHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1489E693B9282BAA43418439 /* libPods-SRMAPIHelper.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,11 @@
 		037DC1CC1DF669930039122E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		037DC1CF1DF669930039122E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		037DC1D11DF669930039122E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		037DC1D91DF6745D0039122E /* SRMAPIProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRMAPIProxy.h; sourceTree = "<group>"; };
+		037DC1DA1DF6745D0039122E /* SRMAPIProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRMAPIProxy.m; sourceTree = "<group>"; };
+		1489E693B9282BAA43418439 /* libPods-SRMAPIHelper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SRMAPIHelper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8914D75DB0693DC0E4EC2DC0 /* Pods-SRMAPIHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SRMAPIHelper.release.xcconfig"; path = "Pods/Target Support Files/Pods-SRMAPIHelper/Pods-SRMAPIHelper.release.xcconfig"; sourceTree = "<group>"; };
+		A8E63CD244BD2C08931B3305 /* Pods-SRMAPIHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SRMAPIHelper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SRMAPIHelper/Pods-SRMAPIHelper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C384B7D383421617977656C9 /* libPods-SRMAPIHelper.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +52,8 @@
 			children = (
 				037DC1BF1DF669930039122E /* SRMAPIHelper */,
 				037DC1BE1DF669930039122E /* Products */,
+				7A6028D31EF839EEC9631E71 /* Pods */,
+				8474887D6E3F686D498151CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +68,7 @@
 		037DC1BF1DF669930039122E /* SRMAPIHelper */ = {
 			isa = PBXGroup;
 			children = (
+				037DC1D71DF6737E0039122E /* Helper */,
 				037DC1C31DF669930039122E /* AppDelegate.h */,
 				037DC1C41DF669930039122E /* AppDelegate.m */,
 				037DC1C61DF669930039122E /* ViewController.h */,
@@ -79,6 +90,40 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		037DC1D71DF6737E0039122E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				037DC1D81DF6737E0039122E /* Proxy */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		037DC1D81DF6737E0039122E /* Proxy */ = {
+			isa = PBXGroup;
+			children = (
+				037DC1D91DF6745D0039122E /* SRMAPIProxy.h */,
+				037DC1DA1DF6745D0039122E /* SRMAPIProxy.m */,
+			);
+			path = Proxy;
+			sourceTree = "<group>";
+		};
+		7A6028D31EF839EEC9631E71 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A8E63CD244BD2C08931B3305 /* Pods-SRMAPIHelper.debug.xcconfig */,
+				8914D75DB0693DC0E4EC2DC0 /* Pods-SRMAPIHelper.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8474887D6E3F686D498151CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1489E693B9282BAA43418439 /* libPods-SRMAPIHelper.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +131,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 037DC1D41DF669930039122E /* Build configuration list for PBXNativeTarget "SRMAPIHelper" */;
 			buildPhases = (
+				1D398DC329E2280CBBE3621B /* [CP] Check Pods Manifest.lock */,
 				037DC1B91DF669930039122E /* Sources */,
 				037DC1BA1DF669930039122E /* Frameworks */,
 				037DC1BB1DF669930039122E /* Resources */,
+				AA2681F55F4A73B2CFE9D435 /* [CP] Embed Pods Frameworks */,
+				3E2B6500C93DC9C1A94D737D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,6 +193,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D398DC329E2280CBBE3621B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3E2B6500C93DC9C1A94D737D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SRMAPIHelper/Pods-SRMAPIHelper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA2681F55F4A73B2CFE9D435 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SRMAPIHelper/Pods-SRMAPIHelper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		037DC1B91DF669930039122E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -152,6 +248,7 @@
 			files = (
 				037DC1C81DF669930039122E /* ViewController.m in Sources */,
 				037DC1C51DF669930039122E /* AppDelegate.m in Sources */,
+				037DC1DB1DF6745D0039122E /* SRMAPIProxy.m in Sources */,
 				037DC1C21DF669930039122E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +367,7 @@
 		};
 		037DC1D51DF669930039122E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8E63CD244BD2C08931B3305 /* Pods-SRMAPIHelper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SRMAPIHelper/Info.plist;
@@ -281,6 +379,7 @@
 		};
 		037DC1D61DF669930039122E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8914D75DB0693DC0E4EC2DC0 /* Pods-SRMAPIHelper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SRMAPIHelper/Info.plist;
@@ -309,6 +408,7 @@
 				037DC1D61DF669930039122E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
