@@ -29,12 +29,13 @@ typedef NS_ENUM (NSUInteger, SRMAPIProxyHTTPMethod){
 /**
  代理发送请求时参数的格式
 
- - SRMAPIProxyParameterTypeTypeDefault: GET 和 DELETE 方法将参数放入 query 中，POST 和 PUT 方法的参数格式为 application/x-www-form-urlencoded
+ - SRMAPIProxyParameterTypeTypeDefault: GET 和 DELETE 方法将参数放入 query 中，POST 
+ 和 PUT 方法的参数格式为 application/x-www-form-urlencoded
  - SRMAPIProxyParameterTypeTypeJSON:    application/json
  */
 typedef NS_ENUM(NSUInteger, SRMAPIProxyParameterType){
-    SRMAPIProxyParameterTypeTypeDefault,
-    SRMAPIProxyParameterTypeTypeJSON
+    SRMAPIProxyParameterTypeDefault,
+    SRMAPIProxyParameterTypeJSON
 };
 
 /**
