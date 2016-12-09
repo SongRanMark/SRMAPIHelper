@@ -77,10 +77,6 @@ typedef void(^SRMAPIProxyFailedCallback)(NSHTTPURLResponse *response, NSError *e
  指定响应体内容要解析为的数据类型
  */
 @property (nonatomic) SRMAPIProxyResponseContentType responseContentType;
-/**
- 指定请求的超时时间
- */
-@property (nonatomic) NSTimeInterval timeoutInterval;
 
 + (instancetype)sharedInstance;
 /**
@@ -90,10 +86,11 @@ typedef void(^SRMAPIProxyFailedCallback)(NSHTTPURLResponse *response, NSError *e
  @param URL                请求 URL
  @param parameterType      请求参数格式
  @param parameters         请求参数
+ @param timeoutInterval    请求超时时间
  @param successfulCallback 请求成功时的响应回调
  @param failedCallback     请求失败时的响应回调，当 HTTP 响应的状态码不为 2xx 时，会执行此
  失败的响应回调
  */
-- (void)requestByMethod:(SRMAPIProxyHTTPMethod)method URL:(NSString *)URL parameterType:(SRMAPIProxyParameterType)parameterType parameters:(id)parameters successfulCallback:(SRMAPIProxySuccessfulCallback)successfulCallback failedCallback:(SRMAPIProxyFailedCallback)failedCallback;
+- (void)requestByMethod:(SRMAPIProxyHTTPMethod)method URL:(NSString *)URL parameterType:(SRMAPIProxyParameterType)parameterType parameters:(id)parameters timeoutInterval:(NSTimeInterval)timeoutInterval successfulCallback:(SRMAPIProxySuccessfulCallback)successfulCallback failedCallback:(SRMAPIProxyFailedCallback)failedCallback;
 
 @end

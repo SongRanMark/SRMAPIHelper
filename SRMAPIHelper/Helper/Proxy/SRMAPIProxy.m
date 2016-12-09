@@ -16,8 +16,6 @@ static NSTimeInterval kTimeoutInterval = 15;
 @interface  SRMAPIProxy ()
 
 @property (nonatomic) AFHTTPSessionManager *sessionManager;
-@property (nonatomic) AFHTTPRequestSerializer *defaultSerializer;
-@property (nonatomic) AFJSONRequestSerializer *jsonSerializer;
 
 @end
 
@@ -49,8 +47,8 @@ static NSTimeInterval kTimeoutInterval = 15;
  作为网络请求代理层对上层 API manager 层的接口，该方法封装了具体的网络请求操作，调用 AFNetworking
  框架实现功能，当要切换其他网络框架或想使用原生网络框架时，只需修改该接口即可。
  */
-- (void)requestByMethod:(SRMAPIProxyHTTPMethod)method URL:(NSString *)URL parameterType:(SRMAPIProxyParameterType)parameterType parameters:(id)parameters successfulCallback:(SRMAPIProxySuccessfulCallback)successfulCallback failedCallback:(SRMAPIProxyFailedCallback)failedCallback {
-    [self setRequestSerializerWithParameterType:parameterType];
+-(void)requestByMethod:(SRMAPIProxyHTTPMethod)method URL:(NSString *)URL parameterType:(SRMAPIProxyParameterType)parameterType parameters:(id)parameters timeoutInterval:(NSTimeInterval)timeoutInterval successfulCallback:(SRMAPIProxySuccessfulCallback)successfulCallback failedCallback:(SRMAPIProxyFailedCallback)failedCallback {
+    self.sessionManager.requestSerializer = [self requestSerializerByParameterType:parameterType timeoutInterval:timeoutInterval];
 
     switch (method) {
         case SRMAPIProxyHTTPMethodGet: {
@@ -93,15 +91,22 @@ static NSTimeInterval kTimeoutInterval = 15;
 
 #pragma mark - Private
 
-- (void)setRequestSerializerWithParameterType:(SRMAPIProxyParameterType)parameterType {
+- (AFHTTPRequestSerializer *)requestSerializerByParameterType:(SRMAPIProxyParameterType)parameterType timeoutInterval:(NSTimeInterval)timeout {
+    AFHTTPRequestSerializer *serializer;
+    
     switch (parameterType) {
         case SRMAPIProxyParameterTypeDefault:
-            self.sessionManager.requestSerializer = self.defaultSerializer;
+            serializer = [AFHTTPRequestSerializer serializer];
             break;
         case SRMAPIProxyParameterTypeJSON:
-            self.sessionManager.requestSerializer = self.jsonSerializer;
+            serializer = [AFJSONRequestSerializer serializer];
             break;
     }
+    
+    
+    serializer.timeoutInterval = timeout > 0 ? timeout : kTimeoutInterval;
+    
+    return serializer;
 }
 
 /*
@@ -183,24 +188,6 @@ static NSTimeInterval kTimeoutInterval = 15;
     }
 
     return _sessionManager;
-}
-
-- (AFHTTPRequestSerializer *)defaultSerializer {
-    if (!_defaultSerializer) {
-        _defaultSerializer = [AFHTTPRequestSerializer serializer];
-        _defaultSerializer.timeoutInterval = kTimeoutInterval;
-    }
-
-    return _defaultSerializer;
-}
-
-- (AFJSONRequestSerializer *)jsonSerializer {
-    if (!_jsonSerializer) {
-        _jsonSerializer = [AFJSONRequestSerializer serializer];
-        _jsonSerializer.timeoutInterval = kTimeoutInterval;
-    }
-
-    return _jsonSerializer;
 }
 
 @end
