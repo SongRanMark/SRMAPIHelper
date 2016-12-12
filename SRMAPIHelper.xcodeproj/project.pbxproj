@@ -14,7 +14,10 @@
 		037DC1CD1DF669930039122E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 037DC1CC1DF669930039122E /* Assets.xcassets */; };
 		037DC1D01DF669930039122E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 037DC1CE1DF669930039122E /* LaunchScreen.storyboard */; };
 		037DC1DB1DF6745D0039122E /* SRMAPIProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 037DC1DA1DF6745D0039122E /* SRMAPIProxy.m */; };
+		037DC20E1DFE83D20039122E /* SRMAPILogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 037DC20D1DFE83D20039122E /* SRMAPILogger.m */; };
 		C384B7D383421617977656C9 /* libPods-SRMAPIHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1489E693B9282BAA43418439 /* libPods-SRMAPIHelper.a */; };
+		EBECD63A97D2E89BE21FF389 /* SRMAPIConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = EBECD38591B4FFC7F1C32D5C /* SRMAPIConfigurator.m */; };
+		EBECD7107AA189E0250850F1 /* SRMBaseAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EBECD1AEB971C25EB2DD685F /* SRMBaseAPIManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,9 +33,15 @@
 		037DC1D11DF669930039122E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		037DC1D91DF6745D0039122E /* SRMAPIProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRMAPIProxy.h; sourceTree = "<group>"; };
 		037DC1DA1DF6745D0039122E /* SRMAPIProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRMAPIProxy.m; sourceTree = "<group>"; };
+		037DC20C1DFE83D20039122E /* SRMAPILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRMAPILogger.h; sourceTree = "<group>"; };
+		037DC20D1DFE83D20039122E /* SRMAPILogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRMAPILogger.m; sourceTree = "<group>"; };
 		1489E693B9282BAA43418439 /* libPods-SRMAPIHelper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SRMAPIHelper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8914D75DB0693DC0E4EC2DC0 /* Pods-SRMAPIHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SRMAPIHelper.release.xcconfig"; path = "Pods/Target Support Files/Pods-SRMAPIHelper/Pods-SRMAPIHelper.release.xcconfig"; sourceTree = "<group>"; };
 		A8E63CD244BD2C08931B3305 /* Pods-SRMAPIHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SRMAPIHelper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SRMAPIHelper/Pods-SRMAPIHelper.debug.xcconfig"; sourceTree = "<group>"; };
+		EBECD1AEB971C25EB2DD685F /* SRMBaseAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRMBaseAPIManager.m; sourceTree = "<group>"; };
+		EBECD1C801D645D30A4B6EDB /* SRMAPIConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRMAPIConfigurator.h; sourceTree = "<group>"; };
+		EBECD38591B4FFC7F1C32D5C /* SRMAPIConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRMAPIConfigurator.m; sourceTree = "<group>"; };
+		EBECDE5C4C5A1B80BA5B0230 /* SRMBaseAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRMBaseAPIManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +102,10 @@
 		037DC1D71DF6737E0039122E /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				EBECD45183FA9068F4ADEE0E /* Manager */,
 				037DC1D81DF6737E0039122E /* Proxy */,
+				EBECD973E6626271DD8A37E7 /* Configurator */,
+				037DC20B1DFE83AB0039122E /* Log */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -105,6 +117,15 @@
 				037DC1DA1DF6745D0039122E /* SRMAPIProxy.m */,
 			);
 			path = Proxy;
+			sourceTree = "<group>";
+		};
+		037DC20B1DFE83AB0039122E /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				037DC20C1DFE83D20039122E /* SRMAPILogger.h */,
+				037DC20D1DFE83D20039122E /* SRMAPILogger.m */,
+			);
+			path = Log;
 			sourceTree = "<group>";
 		};
 		7A6028D31EF839EEC9631E71 /* Pods */ = {
@@ -122,6 +143,24 @@
 				1489E693B9282BAA43418439 /* libPods-SRMAPIHelper.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBECD45183FA9068F4ADEE0E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EBECDE5C4C5A1B80BA5B0230 /* SRMBaseAPIManager.h */,
+				EBECD1AEB971C25EB2DD685F /* SRMBaseAPIManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		EBECD973E6626271DD8A37E7 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				EBECD1C801D645D30A4B6EDB /* SRMAPIConfigurator.h */,
+				EBECD38591B4FFC7F1C32D5C /* SRMAPIConfigurator.m */,
+			);
+			path = Configurator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +289,9 @@
 				037DC1C51DF669930039122E /* AppDelegate.m in Sources */,
 				037DC1DB1DF6745D0039122E /* SRMAPIProxy.m in Sources */,
 				037DC1C21DF669930039122E /* main.m in Sources */,
+				EBECD63A97D2E89BE21FF389 /* SRMAPIConfigurator.m in Sources */,
+				037DC20E1DFE83D20039122E /* SRMAPILogger.m in Sources */,
+				EBECD7107AA189E0250850F1 /* SRMBaseAPIManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
