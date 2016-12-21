@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		032DF3591E08DCD300AC2B5C /* NSString+Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 032DF3581E08DCD300AC2B5C /* NSString+Empty.m */; };
+		032DF35C1E0A1D6D00AC2B5C /* LocalizableAPIManagerErrorMessage.strings in Resources */ = {isa = PBXBuildFile; fileRef = 032DF35B1E0A1D6D00AC2B5C /* LocalizableAPIManagerErrorMessage.strings */; };
+		032DF35F1E0A22B600AC2B5C /* NSBundle+Localization.m in Sources */ = {isa = PBXBuildFile; fileRef = 032DF35E1E0A22B600AC2B5C /* NSBundle+Localization.m */; };
+		032DF3631E0A7A1B00AC2B5C /* SRMPagingAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 032DF3621E0A7A1B00AC2B5C /* SRMPagingAPIManager.m */; };
+		032DF36B1E0A867500AC2B5C /* SRMAPIHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 032DF36A1E0A867500AC2B5C /* SRMAPIHelperTests.m */; };
 		037DC1C21DF669930039122E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 037DC1C11DF669930039122E /* main.m */; };
 		037DC1C51DF669930039122E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 037DC1C41DF669930039122E /* AppDelegate.m */; };
 		037DC1C81DF669930039122E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 037DC1C71DF669930039122E /* ViewController.m */; };
@@ -20,7 +25,28 @@
 		EBECD7107AA189E0250850F1 /* SRMBaseAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EBECD1AEB971C25EB2DD685F /* SRMBaseAPIManager.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		032DF36D1E0A867500AC2B5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 037DC1B51DF669930039122E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 037DC1BC1DF669930039122E;
+			remoteInfo = SRMAPIHelper;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		032DF3571E08DCD300AC2B5C /* NSString+Empty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Empty.h"; sourceTree = "<group>"; };
+		032DF3581E08DCD300AC2B5C /* NSString+Empty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Empty.m"; sourceTree = "<group>"; };
+		032DF35B1E0A1D6D00AC2B5C /* LocalizableAPIManagerErrorMessage.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = LocalizableAPIManagerErrorMessage.strings; sourceTree = "<group>"; };
+		032DF35D1E0A22B600AC2B5C /* NSBundle+Localization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Localization.h"; sourceTree = "<group>"; };
+		032DF35E1E0A22B600AC2B5C /* NSBundle+Localization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Localization.m"; sourceTree = "<group>"; };
+		032DF3601E0A787C00AC2B5C /* SRMAPIHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRMAPIHelper.h; sourceTree = "<group>"; };
+		032DF3611E0A7A1B00AC2B5C /* SRMPagingAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRMPagingAPIManager.h; sourceTree = "<group>"; };
+		032DF3621E0A7A1B00AC2B5C /* SRMPagingAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRMPagingAPIManager.m; sourceTree = "<group>"; };
+		032DF3681E0A867400AC2B5C /* SRMAPIHelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SRMAPIHelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		032DF36A1E0A867500AC2B5C /* SRMAPIHelperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRMAPIHelperTests.m; sourceTree = "<group>"; };
+		032DF36C1E0A867500AC2B5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		037DC1BD1DF669930039122E /* SRMAPIHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SRMAPIHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		037DC1C11DF669930039122E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		037DC1C31DF669930039122E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -45,6 +71,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		032DF3651E0A867400AC2B5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		037DC1BA1DF669930039122E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -56,10 +89,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		032DF3561E08DCC600AC2B5C /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				032DF3571E08DCD300AC2B5C /* NSString+Empty.h */,
+				032DF3581E08DCD300AC2B5C /* NSString+Empty.m */,
+				032DF35D1E0A22B600AC2B5C /* NSBundle+Localization.h */,
+				032DF35E1E0A22B600AC2B5C /* NSBundle+Localization.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		032DF35A1E0A1C8200AC2B5C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				032DF35B1E0A1D6D00AC2B5C /* LocalizableAPIManagerErrorMessage.strings */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		032DF3691E0A867500AC2B5C /* SRMAPIHelperTests */ = {
+			isa = PBXGroup;
+			children = (
+				032DF36A1E0A867500AC2B5C /* SRMAPIHelperTests.m */,
+				032DF36C1E0A867500AC2B5C /* Info.plist */,
+			);
+			path = SRMAPIHelperTests;
+			sourceTree = "<group>";
+		};
 		037DC1B41DF669930039122E = {
 			isa = PBXGroup;
 			children = (
 				037DC1BF1DF669930039122E /* SRMAPIHelper */,
+				032DF3691E0A867500AC2B5C /* SRMAPIHelperTests */,
 				037DC1BE1DF669930039122E /* Products */,
 				7A6028D31EF839EEC9631E71 /* Pods */,
 				8474887D6E3F686D498151CB /* Frameworks */,
@@ -70,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				037DC1BD1DF669930039122E /* SRMAPIHelper.app */,
+				032DF3681E0A867400AC2B5C /* SRMAPIHelperTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,10 +165,13 @@
 		037DC1D71DF6737E0039122E /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				032DF3601E0A787C00AC2B5C /* SRMAPIHelper.h */,
 				EBECD45183FA9068F4ADEE0E /* Manager */,
 				037DC1D81DF6737E0039122E /* Proxy */,
 				EBECD973E6626271DD8A37E7 /* Configurator */,
 				037DC20B1DFE83AB0039122E /* Log */,
+				032DF3561E08DCC600AC2B5C /* Category */,
+				032DF35A1E0A1C8200AC2B5C /* Resource */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -150,6 +216,8 @@
 			children = (
 				EBECDE5C4C5A1B80BA5B0230 /* SRMBaseAPIManager.h */,
 				EBECD1AEB971C25EB2DD685F /* SRMBaseAPIManager.m */,
+				032DF3611E0A7A1B00AC2B5C /* SRMPagingAPIManager.h */,
+				032DF3621E0A7A1B00AC2B5C /* SRMPagingAPIManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -166,6 +234,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		032DF3671E0A867400AC2B5C /* SRMAPIHelperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 032DF36F1E0A867500AC2B5C /* Build configuration list for PBXNativeTarget "SRMAPIHelperTests" */;
+			buildPhases = (
+				032DF3641E0A867400AC2B5C /* Sources */,
+				032DF3651E0A867400AC2B5C /* Frameworks */,
+				032DF3661E0A867400AC2B5C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				032DF36E1E0A867500AC2B5C /* PBXTargetDependency */,
+			);
+			name = SRMAPIHelperTests;
+			productName = SRMAPIHelperTests;
+			productReference = 032DF3681E0A867400AC2B5C /* SRMAPIHelperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		037DC1BC1DF669930039122E /* SRMAPIHelper */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 037DC1D41DF669930039122E /* Build configuration list for PBXNativeTarget "SRMAPIHelper" */;
@@ -195,6 +281,11 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = S.R;
 				TargetAttributes = {
+					032DF3671E0A867400AC2B5C = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 037DC1BC1DF669930039122E;
+					};
 					037DC1BC1DF669930039122E = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
@@ -215,11 +306,19 @@
 			projectRoot = "";
 			targets = (
 				037DC1BC1DF669930039122E /* SRMAPIHelper */,
+				032DF3671E0A867400AC2B5C /* SRMAPIHelperTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		032DF3661E0A867400AC2B5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		037DC1BB1DF669930039122E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -227,6 +326,7 @@
 				037DC1D01DF669930039122E /* LaunchScreen.storyboard in Resources */,
 				037DC1CD1DF669930039122E /* Assets.xcassets in Resources */,
 				037DC1CB1DF669930039122E /* Main.storyboard in Resources */,
+				032DF35C1E0A1D6D00AC2B5C /* LocalizableAPIManagerErrorMessage.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +381,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		032DF3641E0A867400AC2B5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				032DF36B1E0A867500AC2B5C /* SRMAPIHelperTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		037DC1B91DF669930039122E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -288,14 +396,25 @@
 				037DC1C81DF669930039122E /* ViewController.m in Sources */,
 				037DC1C51DF669930039122E /* AppDelegate.m in Sources */,
 				037DC1DB1DF6745D0039122E /* SRMAPIProxy.m in Sources */,
+				032DF3631E0A7A1B00AC2B5C /* SRMPagingAPIManager.m in Sources */,
 				037DC1C21DF669930039122E /* main.m in Sources */,
+				032DF35F1E0A22B600AC2B5C /* NSBundle+Localization.m in Sources */,
 				EBECD63A97D2E89BE21FF389 /* SRMAPIConfigurator.m in Sources */,
+				032DF3591E08DCD300AC2B5C /* NSString+Empty.m in Sources */,
 				037DC20E1DFE83D20039122E /* SRMAPILogger.m in Sources */,
 				EBECD7107AA189E0250850F1 /* SRMBaseAPIManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		032DF36E1E0A867500AC2B5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 037DC1BC1DF669930039122E /* SRMAPIHelper */;
+			targetProxy = 032DF36D1E0A867500AC2B5C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		037DC1C91DF669930039122E /* Main.storyboard */ = {
@@ -317,6 +436,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		032DF3701E0A867500AC2B5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/OHHTTPStubs\"",
+				);
+				INFOPLIST_FILE = SRMAPIHelperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				NEW_SETTING = "";
+				PODS_ROOT = "${SRCROOT}/Pods";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sr.SRMAPIHelperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SRMAPIHelper.app/SRMAPIHelper";
+			};
+			name = Debug;
+		};
+		032DF3711E0A867500AC2B5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/OHHTTPStubs\"",
+				);
+				INFOPLIST_FILE = SRMAPIHelperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				NEW_SETTING = "";
+				PODS_ROOT = "${SRCROOT}/Pods";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sr.SRMAPIHelperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SRMAPIHelper.app/SRMAPIHelper";
+			};
+			name = Release;
+		};
 		037DC1D21DF669930039122E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -434,6 +593,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		032DF36F1E0A867500AC2B5C /* Build configuration list for PBXNativeTarget "SRMAPIHelperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				032DF3701E0A867500AC2B5C /* Debug */,
+				032DF3711E0A867500AC2B5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		037DC1B81DF669930039122E /* Build configuration list for PBXProject "SRMAPIHelper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

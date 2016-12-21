@@ -46,6 +46,20 @@
     return sharedInstance;
 }
 
+- (void)logRequest:(NSURLRequest *)request {
+    if (!self.enabled) {
+        return;
+    }
+    
+    NSMutableString *logString = [NSMutableString stringWithString:@"*** Request ***\n\n"];
+    [logString appendFormat:@"%@\n\n", request.HTTPMethod];
+    [logString appendFormat:@"URL : %@\n\n", request.URL.absoluteString];
+    [logString appendFormat:@"Body : %@\n\n", [[NSString alloc] initWithData:request.HTTPBody encoding:NSUTF8StringEncoding]];
+    [logString appendFormat:@"Time : %@\n\n", [self.dateFormatter stringFromDate:[NSDate date]]];
+    [logString appendString:@"***\n"];
+    fprintf(stderr,"%s", [logString UTF8String]);
+}
+
 - (void)logRequestWithAPIManager:(SRMBaseAPIManager *)APIManager URL:(NSString *)URL parameters:(id)parameters {
     if (!self.enabled) {
         return;
