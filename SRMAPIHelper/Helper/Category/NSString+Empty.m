@@ -35,4 +35,8 @@ static NSString *const kEmptyString = @"";
     return NO;
 }
 
+- (NSString *)stringByTrimmingSpace {
+    return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+}
+
 @end

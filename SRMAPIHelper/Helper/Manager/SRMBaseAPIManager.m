@@ -39,6 +39,8 @@ static NSString * const kLocalizedErrorMessageKeyServer = @"Server";
     NSArray *queryItems = [NSURLComponents componentsWithString:URL.absoluteString].queryItems;
     
     if ([self shouldRequestWithQueryItems:queryItems parameters:parameters]) {
+        // 在 manager 层记录日志而不是 proxy 层的原因是，除了必要的请求或响应信息，还可以记录
+        // 具体的 manager 子类，该内容可方便日志信息的查看。
         [[SRMAPILogger sharedInstance] logRequestWithAPIManager:self URL:URL.absoluteString parameters:parameters];
         
         if (![self isValidQueryItems:queryItems parameters:parameters]) {

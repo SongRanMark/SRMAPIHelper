@@ -31,7 +31,8 @@ typedef NS_ENUM (NSUInteger, SRMAPIProxyHTTPMethod){
 
  - SRMAPIProxyParameterTypeTypeDefault: GET 和 DELETE 方法将参数放入 query 中，POST 
  和 PUT 方法的参数格式为 application/x-www-form-urlencoded
- - SRMAPIProxyParameterTypeTypeJSON:    application/json
+ - SRMAPIProxyParameterTypeTypeJSON:    GET 和 DELETE 方法将参数放入 query 中，POST
+ 和 PUT 方法的参数格式为 application/json
  */
 typedef NS_ENUM(NSUInteger, SRMAPIProxyParameterType){
     SRMAPIProxyParameterTypeDefault,
@@ -61,9 +62,9 @@ typedef void(^SRMAPIProxySuccessfulCallback)(NSHTTPURLResponse *response, id con
 
  @param response 代表响应相关信息的 NSHTTPURLResponse 实例
  @param error    封装失败错误信息的 NSError 实例。若错误原因为应用客户端错误，则 error domain
- 为 NSURLErrorDomain，可根据 code 判断错误原因。若返回响应但状态码不为 2xx 且响应体包含内容时，
- error domain 为 kSRMAPIProxyErrorDomain，在 userInfo 中可根据键 kSRMAPIProxyErrorDataKey
- 获取响应内容，内容数据类型根据配置可能是 NSData 类型或 JSON 类型。
+ 为 NSURLErrorDomain，可根据 code 判断错误原因。若返回响应但状态码不为 2xx 时，error domain 
+ 为 kSRMAPIProxyErrorDomain，在 userInfo 中可根据键 kSRMAPIProxyErrorDataKey获取响应
+ 内容，内容数据类型根据配置可能是 NSString 类型或 JSON 类型。
  */
 typedef void(^SRMAPIProxyFailedCallback)(NSHTTPURLResponse *response, NSError *error);
 
@@ -74,7 +75,7 @@ typedef void(^SRMAPIProxyFailedCallback)(NSHTTPURLResponse *response, NSError *e
 @interface SRMAPIProxy : NSObject
 
 /**
- 指定响应体内容要解析为的数据类型
+ 指定响应体内容要解析为的数据类型，默认为 SRMAPIProxyResponseContentTypeJSON。
  */
 @property (nonatomic) SRMAPIProxyResponseContentType responseContentType;
 

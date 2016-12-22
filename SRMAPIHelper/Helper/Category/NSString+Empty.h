@@ -12,5 +12,6 @@
 
 + (NSString *)emptyString;
 + (BOOL)isNilOrEmptyString:(NSString *)string;
+- (NSString *)stringByTrimmingSpace;
 
 @end

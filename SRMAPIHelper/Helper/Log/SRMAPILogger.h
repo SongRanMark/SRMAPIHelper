@@ -18,7 +18,6 @@
 @property (nonatomic) BOOL enabled;
 
 + (instancetype)sharedInstance;
-- (void)logRequest:(NSURLRequest *)request;
 /**
  打印格式化的请求信息日志。
 

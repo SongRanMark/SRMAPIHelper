@@ -7,6 +7,7 @@
 //
 
 #import "SRMAPIProxy.h"
+#import "SRMAPILogger.h"
 #import <AFNetworking/AFNetworking.h>
 
 NSString * const kSRMAPIProxyErrorDomain = @"com.sr.api.proxy.error";
@@ -132,7 +133,7 @@ static NSTimeInterval kTimeoutInterval = 15;
                 dataObject = [[NSString alloc] initWithData:errorData encoding:NSUTF8StringEncoding];
 
                 if (!dataObject) {
-                    // Need log
+                    [[SRMAPILogger sharedInstance] log:@"Failed to parse error content to text"];
                 }
 
                 break;
@@ -141,7 +142,7 @@ static NSTimeInterval kTimeoutInterval = 15;
                 dataObject = [NSJSONSerialization JSONObjectWithData:errorData options:0 error:&parsingError];
 
                 if (parsingError) {
-                    // Need log
+                    [[SRMAPILogger sharedInstance] log:@"Failed to parse error content as json : %@", parsingError];
                 }
             }
                 break;
