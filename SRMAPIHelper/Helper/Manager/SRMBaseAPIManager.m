@@ -172,7 +172,7 @@ static NSString * const kLocalizedErrorMessageKeyServer = @"Server";
     NSString *errorMessage = [self localizedErrorMessageWithKey:kLocalizedErrorMessageKeyUnknown];
     id  responseContent;
     
-    if ([error.domain isEqualToString:kSRMAPIProxyErrorDomain] && (error.code == SRMAPIManagerResponseErrorInvalidParameter || error.code == SRMAPIManagerResponseErrorInvalidResponseContent)) {
+    if ([error.domain isEqualToString:kSRMAPIManagerErrorDomain] && (error.code == SRMAPIManagerResponseErrorInvalidParameter || error.code == SRMAPIManagerResponseErrorInvalidResponseContent)) {
         errorCode = error.code;
         errorMessage = error.localizedDescription;
         responseContent = error.userInfo[kSRMAPIManagerErrorUserInfoKeyData];

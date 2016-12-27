@@ -14,10 +14,15 @@
 		033DF7901E0D208D0040C103 /* SRMAPITestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 033DF78F1E0D208D0040C103 /* SRMAPITestCase.m */; };
 		033DF7941E0D214E0040C103 /* SRMAPIManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 033DF7921E0D214E0040C103 /* SRMAPIManagerTests.m */; };
 		033DF7951E0D214E0040C103 /* SRMAPIProxyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 033DF7931E0D214E0040C103 /* SRMAPIProxyTests.m */; };
-		033DF7981E0D37A10040C103 /* SRMExamplePostAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 033DF7971E0D37A10040C103 /* SRMExamplePostAPIManager.m */; };
-		033DF79B1E0D3C610040C103 /* SRMExamplePutAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 033DF79A1E0D3C610040C103 /* SRMExamplePutAPIManager.m */; };
-		033DF79E1E0D3D980040C103 /* SRMExampleDeleteAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 033DF79D1E0D3D980040C103 /* SRMExampleDeleteAPIManager.m */; };
-		037014011E0D1820009C1A97 /* SRMExampleAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 037014001E0D1820009C1A97 /* SRMExampleAPIManager.m */; };
+		033DF7A41E10AC8F0040C103 /* SRMAPIProcesser.m in Sources */ = {isa = PBXBuildFile; fileRef = 033DF7A31E10AC8F0040C103 /* SRMAPIProcesser.m */; };
+		033DF7B01E10ACCB0040C103 /* SRMExampleAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 033DF7A71E10ACCB0040C103 /* SRMExampleAPIManager.m */; };
+		033DF7B11E10ACCB0040C103 /* SRMExampleDeleteAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 033DF7A91E10ACCB0040C103 /* SRMExampleDeleteAPIManager.m */; };
+		033DF7B21E10ACCB0040C103 /* SRMExampleGetAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 033DF7AB1E10ACCB0040C103 /* SRMExampleGetAPIManager.m */; };
+		033DF7B31E10ACCB0040C103 /* SRMExamplePostAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 033DF7AD1E10ACCB0040C103 /* SRMExamplePostAPIManager.m */; };
+		033DF7B41E10ACCB0040C103 /* SRMExamplePutAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 033DF7AF1E10ACCB0040C103 /* SRMExamplePutAPIManager.m */; };
+		033DF7B91E1257F90040C103 /* SRMPagingAPIManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 033DF7B81E1257F90040C103 /* SRMPagingAPIManagerTests.m */; };
+		033DF7BC1E1258D70040C103 /* SRMExampleListAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 033DF7BB1E1258D70040C103 /* SRMExampleListAPIManager.m */; };
+		033DF7BE1E1269CE0040C103 /* SRMAPIConfiguratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 033DF7BD1E1269CE0040C103 /* SRMAPIConfiguratorTests.m */; };
 		037DC1C21DF669930039122E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 037DC1C11DF669930039122E /* main.m */; };
 		037DC1C51DF669930039122E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 037DC1C41DF669930039122E /* AppDelegate.m */; };
 		037DC1C81DF669930039122E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 037DC1C71DF669930039122E /* ViewController.m */; };
@@ -56,14 +61,22 @@
 		033DF78F1E0D208D0040C103 /* SRMAPITestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRMAPITestCase.m; sourceTree = "<group>"; };
 		033DF7921E0D214E0040C103 /* SRMAPIManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRMAPIManagerTests.m; sourceTree = "<group>"; };
 		033DF7931E0D214E0040C103 /* SRMAPIProxyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRMAPIProxyTests.m; sourceTree = "<group>"; };
-		033DF7961E0D37A10040C103 /* SRMExamplePostAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRMExamplePostAPIManager.h; sourceTree = "<group>"; };
-		033DF7971E0D37A10040C103 /* SRMExamplePostAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRMExamplePostAPIManager.m; sourceTree = "<group>"; };
-		033DF7991E0D3C610040C103 /* SRMExamplePutAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRMExamplePutAPIManager.h; sourceTree = "<group>"; };
-		033DF79A1E0D3C610040C103 /* SRMExamplePutAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRMExamplePutAPIManager.m; sourceTree = "<group>"; };
-		033DF79C1E0D3D980040C103 /* SRMExampleDeleteAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRMExampleDeleteAPIManager.h; sourceTree = "<group>"; };
-		033DF79D1E0D3D980040C103 /* SRMExampleDeleteAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRMExampleDeleteAPIManager.m; sourceTree = "<group>"; };
-		037013FF1E0D1820009C1A97 /* SRMExampleAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRMExampleAPIManager.h; sourceTree = "<group>"; };
-		037014001E0D1820009C1A97 /* SRMExampleAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRMExampleAPIManager.m; sourceTree = "<group>"; };
+		033DF7A21E10AC8F0040C103 /* SRMAPIProcesser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRMAPIProcesser.h; sourceTree = "<group>"; };
+		033DF7A31E10AC8F0040C103 /* SRMAPIProcesser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRMAPIProcesser.m; sourceTree = "<group>"; };
+		033DF7A61E10ACCB0040C103 /* SRMExampleAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRMExampleAPIManager.h; sourceTree = "<group>"; };
+		033DF7A71E10ACCB0040C103 /* SRMExampleAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRMExampleAPIManager.m; sourceTree = "<group>"; };
+		033DF7A81E10ACCB0040C103 /* SRMExampleDeleteAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRMExampleDeleteAPIManager.h; sourceTree = "<group>"; };
+		033DF7A91E10ACCB0040C103 /* SRMExampleDeleteAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRMExampleDeleteAPIManager.m; sourceTree = "<group>"; };
+		033DF7AA1E10ACCB0040C103 /* SRMExampleGetAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRMExampleGetAPIManager.h; sourceTree = "<group>"; };
+		033DF7AB1E10ACCB0040C103 /* SRMExampleGetAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRMExampleGetAPIManager.m; sourceTree = "<group>"; };
+		033DF7AC1E10ACCB0040C103 /* SRMExamplePostAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRMExamplePostAPIManager.h; sourceTree = "<group>"; };
+		033DF7AD1E10ACCB0040C103 /* SRMExamplePostAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRMExamplePostAPIManager.m; sourceTree = "<group>"; };
+		033DF7AE1E10ACCB0040C103 /* SRMExamplePutAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRMExamplePutAPIManager.h; sourceTree = "<group>"; };
+		033DF7AF1E10ACCB0040C103 /* SRMExamplePutAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRMExamplePutAPIManager.m; sourceTree = "<group>"; };
+		033DF7B81E1257F90040C103 /* SRMPagingAPIManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRMPagingAPIManagerTests.m; sourceTree = "<group>"; };
+		033DF7BA1E1258D70040C103 /* SRMExampleListAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRMExampleListAPIManager.h; sourceTree = "<group>"; };
+		033DF7BB1E1258D70040C103 /* SRMExampleListAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRMExampleListAPIManager.m; sourceTree = "<group>"; };
+		033DF7BD1E1269CE0040C103 /* SRMAPIConfiguratorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRMAPIConfiguratorTests.m; sourceTree = "<group>"; };
 		037DC1BD1DF669930039122E /* SRMAPIHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SRMAPIHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		037DC1C11DF669930039122E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		037DC1C31DF669930039122E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -130,14 +143,9 @@
 			children = (
 				033DF78E1E0D208D0040C103 /* SRMAPITestCase.h */,
 				033DF78F1E0D208D0040C103 /* SRMAPITestCase.m */,
-				037013FF1E0D1820009C1A97 /* SRMExampleAPIManager.h */,
-				037014001E0D1820009C1A97 /* SRMExampleAPIManager.m */,
-				033DF7961E0D37A10040C103 /* SRMExamplePostAPIManager.h */,
-				033DF7971E0D37A10040C103 /* SRMExamplePostAPIManager.m */,
-				033DF7991E0D3C610040C103 /* SRMExamplePutAPIManager.h */,
-				033DF79A1E0D3C610040C103 /* SRMExamplePutAPIManager.m */,
-				033DF79C1E0D3D980040C103 /* SRMExampleDeleteAPIManager.h */,
-				033DF79D1E0D3D980040C103 /* SRMExampleDeleteAPIManager.m */,
+				033DF7A21E10AC8F0040C103 /* SRMAPIProcesser.h */,
+				033DF7A31E10AC8F0040C103 /* SRMAPIProcesser.m */,
+				033DF7A51E10ACCB0040C103 /* ExampleAPIManagers */,
 				033DF7911E0D214E0040C103 /* Tests */,
 				032DF36C1E0A867500AC2B5C /* Info.plist */,
 			);
@@ -147,10 +155,31 @@
 		033DF7911E0D214E0040C103 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				033DF7921E0D214E0040C103 /* SRMAPIManagerTests.m */,
 				033DF7931E0D214E0040C103 /* SRMAPIProxyTests.m */,
+				033DF7921E0D214E0040C103 /* SRMAPIManagerTests.m */,
+				033DF7B81E1257F90040C103 /* SRMPagingAPIManagerTests.m */,
+				033DF7BD1E1269CE0040C103 /* SRMAPIConfiguratorTests.m */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		033DF7A51E10ACCB0040C103 /* ExampleAPIManagers */ = {
+			isa = PBXGroup;
+			children = (
+				033DF7A61E10ACCB0040C103 /* SRMExampleAPIManager.h */,
+				033DF7A71E10ACCB0040C103 /* SRMExampleAPIManager.m */,
+				033DF7AA1E10ACCB0040C103 /* SRMExampleGetAPIManager.h */,
+				033DF7AB1E10ACCB0040C103 /* SRMExampleGetAPIManager.m */,
+				033DF7AC1E10ACCB0040C103 /* SRMExamplePostAPIManager.h */,
+				033DF7AD1E10ACCB0040C103 /* SRMExamplePostAPIManager.m */,
+				033DF7AE1E10ACCB0040C103 /* SRMExamplePutAPIManager.h */,
+				033DF7AF1E10ACCB0040C103 /* SRMExamplePutAPIManager.m */,
+				033DF7A81E10ACCB0040C103 /* SRMExampleDeleteAPIManager.h */,
+				033DF7A91E10ACCB0040C103 /* SRMExampleDeleteAPIManager.m */,
+				033DF7BA1E1258D70040C103 /* SRMExampleListAPIManager.h */,
+				033DF7BB1E1258D70040C103 /* SRMExampleListAPIManager.m */,
+			);
+			path = ExampleAPIManagers;
 			sourceTree = "<group>";
 		};
 		037DC1B41DF669930039122E = {
@@ -423,13 +452,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				033DF7BC1E1258D70040C103 /* SRMExampleListAPIManager.m in Sources */,
+				033DF7B01E10ACCB0040C103 /* SRMExampleAPIManager.m in Sources */,
+				033DF7B11E10ACCB0040C103 /* SRMExampleDeleteAPIManager.m in Sources */,
+				033DF7B41E10ACCB0040C103 /* SRMExamplePutAPIManager.m in Sources */,
 				033DF7941E0D214E0040C103 /* SRMAPIManagerTests.m in Sources */,
-				033DF7981E0D37A10040C103 /* SRMExamplePostAPIManager.m in Sources */,
-				033DF79B1E0D3C610040C103 /* SRMExamplePutAPIManager.m in Sources */,
-				037014011E0D1820009C1A97 /* SRMExampleAPIManager.m in Sources */,
+				033DF7B21E10ACCB0040C103 /* SRMExampleGetAPIManager.m in Sources */,
 				033DF7951E0D214E0040C103 /* SRMAPIProxyTests.m in Sources */,
 				033DF7901E0D208D0040C103 /* SRMAPITestCase.m in Sources */,
-				033DF79E1E0D3D980040C103 /* SRMExampleDeleteAPIManager.m in Sources */,
+				033DF7B91E1257F90040C103 /* SRMPagingAPIManagerTests.m in Sources */,
+				033DF7B31E10ACCB0040C103 /* SRMExamplePostAPIManager.m in Sources */,
+				033DF7BE1E1269CE0040C103 /* SRMAPIConfiguratorTests.m in Sources */,
+				033DF7A41E10AC8F0040C103 /* SRMAPIProcesser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
