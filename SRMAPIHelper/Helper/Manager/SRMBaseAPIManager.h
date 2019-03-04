@@ -176,7 +176,7 @@ typedef NS_ENUM (NSUInteger, SRMAPIManagerResponseErrorCode){
 - (SRMAPIManagerParameterType)parameterType;
 /**
  子类重写该方法，提供请求 API 时的参数，子类可对外提供接口收集参数信息，之后在该方法中对收集到的
- 参数进行加工，组装。另外可以添加不需要用户提供的参数，比如一个 API 某一参数为几种固定的值，在
+ 参数进行加工，组装。另外可以添加不需要业务方提供的参数，比如一个 API 某一参数为几种固定的值，在
  客户端将其分为几个不同的 API Manager 提供可能更合理，这时可以在该方法中设置对应的参数的值。默认
  返回 nil。
  
@@ -332,7 +332,7 @@ typedef NS_ENUM (NSUInteger, SRMAPIManagerResponseErrorCode){
 @protocol SRMAPIManagerResponseDelegate <NSObject>
 
 /**
- 返回成功响应时执行，HTTP 响应的状态码不为 2xx 时，属于失败响应，例如，当请求数据为空，返回状态
+ 返回成功响应时执行，HTTP 响应的状态码不为 200 时，属于失败响应，例如，当请求数据为空，返回状态
  码为 204 时，属于失败响应。
 
  @param APIManager 发起请求的 API 管理者。
@@ -425,7 +425,7 @@ typedef NS_ENUM (NSUInteger, SRMAPIManagerResponseErrorCode){
 /**
  根据提供的响应信息返回自定义错误信息。
  
- @param APIManager APIManager 发起请求的 API 管理者。
+ @param APIManager 发起请求的 API 管理者。
  @param response 返回的响应头信息，当失败情况为客户端未成功发起请求，则该值为空。
  @param content 当成功发起请求，但响应状态码为失败的情况时，响应体的内容。其他情况该值可能为空。
  @param errorCode 对应的错误状态码，可根据此判断错误类型。

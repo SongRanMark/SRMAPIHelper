@@ -115,7 +115,7 @@ static NSTimeInterval kTimeoutInterval = 15;
  的形式保存在返回的 error 中。处理返回的 error 的意义在于 AFNetworking 并不会对失败的响应内容
  做转换，这里可根据 responseContentType 的设置，尝试将响应内容转换为字符串或 JSON 类型，一般
  这类响应内容包含请求失败的原因，最终提供给业务层便于使用。另外，这类 error 设置为 AFNetworking
- 自己的 domain 和 code，为了达到封装和屏蔽的目的，应替换为代理层定义的  domain 和 code
+ 自己的 domain 和 code，为了达到封装和屏蔽的目的，应替换为代理层定义的 domain 和 code
  */
 - (NSError *)processedError:(NSError *)error {
     if (![error.domain isEqualToString:AFURLResponseSerializationErrorDomain]) {
